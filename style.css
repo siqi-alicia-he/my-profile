@@ -1,0 +1,84 @@
+/* Base */
+:root{
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --primary:#6366f1;
+  --ring: rgba(0,0,0,.06);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Inter,Helvetica,Arial,sans-serif}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Layout */
+.container{
+  width:700px;
+  margin:40px auto;
+  padding:0 10px;
+}
+
+.card-white{
+  background:var(--card);
+  border-radius:12px;
+  box-shadow:0 10px 30px var(--ring);
+  padding:28px;
+  margin-bottom:24px;
+  border:1px solid rgba(0,0,0,.04);
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.card-white:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 40px rgba(0,0,0,.10);
+}
+
+/* Intro */
+.intro{text-align:center}
+h1{margin:0 0 10px;font-size:28px}
+h2{margin:0 0 14px;font-size:20px}
+.tagline{color:var(--muted);max-width:48ch;margin:8px auto 18px}
+.avatar{
+  width:92px;height:92px;border-radius:999px;display:block;margin:0 auto 10px;border:2px solid rgba(0,0,0,.05)
+}
+
+.cta-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{
+  display:inline-block;
+  padding:10px 14px;
+  background:var(--primary);
+  color:#fff;
+  border-radius:10px;
+  border:1px solid transparent;
+  box-shadow:0 6px 16px rgba(99,102,241,.25);
+}
+.btn:hover{opacity:.95;text-decoration:none}
+.btn-outline{
+  background:transparent;
+  color:var(--primary);
+  border-color:var(--primary);
+  box-shadow:none;
+}
+
+/* Content blocks */
+.timeline{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.item-head{font-weight:600}
+.item-meta{font-size:14px;color:var(--muted);margin:2px 0 6px}
+.bullets{margin:6px 0 0 18px}
+.bullets li{margin:6px 0}
+
+/* Pills */
+.pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px}
+.pill{
+  display:inline-block;font-size:14px;padding:6px 10px;border-radius:999px;
+  background:#eef2ff;border:1px solid rgba(99,102,241,.25)
+}
+
+/* Footer */
+.footer{font-size:14px;color:var(--muted);text-align:center}
+
+/* Responsive */
+@media (max-width:760px){
+  .container{width:100%;margin:16px auto}
+}
