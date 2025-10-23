@@ -39,8 +39,15 @@ a:hover{text-decoration:underline}
 h1{margin:0 0 10px;font-size:28px}
 h2{margin:0 0 14px;font-size:20px}
 .tagline{color:var(--muted);max-width:48ch;margin:8px auto 18px}
-.avatar{
-  width:92px;height:92px;border-radius:999px;display:block;margin:0 auto 10px;border:2px solid rgba(0,0,0,.05)
+.avatar {
+  width: 120px;               /* adjust size if you like */
+  height: 120px;
+  border-radius: 999px;
+  display: block;
+  margin: 0 auto 10px;
+  border: 2px solid rgba(0, 0, 0, .05);
+  object-fit: cover;          /* crop to fit the box */
+  object-position: center;    /* take the center portion */
 }
 
 .cta-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
